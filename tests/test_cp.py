@@ -5,7 +5,9 @@ import pytest
 def test_cp_real_downturn():
     """copy existing file to new file"""
     # setup
-    f1 = to_path('SRCFILE')
+    f1 = to_path('tests/SRCFILE')
+    if not f1.is_file():
+        raise Exception('This test uses a relative path. Has the test, file, or working directory been moved?')
     f2 = to_path('f2')
 
     # run test

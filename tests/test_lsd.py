@@ -19,7 +19,7 @@ def test_lsd_downturn():
     files = lsd(d1)
 
     # check
-    assert set(str(f) for f in files) == set(['d1/d1', 'd2/d2'])
+    assert set(str(f) for f in files) == set(['d1/d1', 'd1/d2'])
 
     # cleanup
     rm(d1)
